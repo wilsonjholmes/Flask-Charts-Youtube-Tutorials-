@@ -11,8 +11,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-
-
     <!-- JQuery links  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -25,7 +23,6 @@
     <!--Gauge  -->
     <script type="text/javascript" src="http://pubnub.github.io/eon/lib/eon.js"></script>
 
-
 </head>
 
 <body>
@@ -37,51 +34,39 @@
     <br>
 
     <div class="container-fluid">
-
         <div class="row">
-
             <div class="col-5 jumbotron p-2 mx-1">
                 <h1 class="sensor1"> Sensor : </h1>
             </div>
             <br>
-
             <div class="col-5 jumbotron p-2 mx-1">
                 <h1 class="sensor2">Sensor :</h1>
             </div>
             <br>
-
-
-
         </div>
     </div>
 
     <style>
-
         .jumbotron{
             widows: 150px;
             height: 220px;
             justify-content: center;
         }
-
         .row{
             justify-content: center;
         }
-
-
     </style>
 
     <div class="container-fluid">
         <!-- Example row of columns -->
         <div class="row">
             <div class="container-fluid" id="data-temperature">
-
             </div>
         </div>
     </div>
 <br>
 <br>
 <br>
-
     <div class="container-fluid">
         <!-- Example row of columns -->
         <div class="row">
@@ -90,7 +75,6 @@
             </div>
         </div>
     </div>
-
 
     <script>
         var chartTemperatue;
@@ -117,13 +101,11 @@
                 data1.push(result[0]);
                 data1.push(result[1]);
 
-
                 // Add the Point
                 // Time Humidity
                 var data2 = [];
                 data2.push(result[0]);
                 data2.push(result[2]);
-
 
                 chartTemperatue.series[0].addPoint(data1, true, shiftTemperature);
                 chartHumidity.series[0].addPoint(data2, true, shiftHumidity);
@@ -209,12 +191,9 @@
                     data: []
                 }]
             });
-
-
         });
+
     </script>
-
-
 
 <script>
     class Image{
@@ -253,13 +232,14 @@
             t1.classList.add("display-3");
         }
     }
+
     const imgUrl = 'https://media3.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif'
     const size = "50";
     var obj = new Image(imgUrl, size);
     obj.backgroundImage();
     obj.centerTitle();
+
     </script>
 </body>
-
 
 </html>
