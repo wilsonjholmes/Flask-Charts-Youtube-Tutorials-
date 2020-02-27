@@ -7,11 +7,13 @@ from flask import Flask, render_template, make_response
 app = Flask(__name__)
 
 
+# Defines the home page
 @app.route('/', methods=["GET", "POST"])
 def main():
     return render_template('index.html')
 
 
+# Defines the data webpage (not seen by the user)
 @app.route('/data', methods=["GET", "POST"])
 def data():
     # Data Format
