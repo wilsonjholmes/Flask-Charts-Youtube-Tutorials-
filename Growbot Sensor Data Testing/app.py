@@ -4,6 +4,8 @@ import json
 from time import time
 from random import random
 from flask import Flask, render_template, make_response
+from SoilSensor import SoilSensor
+
 app = Flask(__name__)
 
 
@@ -19,8 +21,10 @@ def data():
     # Data Format
     # [TIME, Temperature, Moisture]
 
-    Temperature = random() * 100
-    Moisture = random() * 55
+    Moisture, Temperature = read_soil()
+
+    # Temperature = random() * 100
+    # Moisture = random() * 55
 
     data = [time() * 1000, Temperature, Moisture]
 

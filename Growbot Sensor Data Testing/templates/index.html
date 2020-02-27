@@ -27,7 +27,7 @@
 <body>
 
     <div class="jumbotron">
-        <h1 class="text-center text-white">Here you can see a live view of all of your sensor data</h1>
+        <h1 class="text-center text-white">Here you can see a live view of all of your sensor data.</h1>
     </div>
     <br>
     <br>
@@ -88,11 +88,11 @@
             {
                 // Temperature
                 var seriesTemperature = chartTemperatue.series[0],
-                    shiftTemperature = seriesTemperature.data.length > 20;
+                    shiftTemperature = seriesTemperature.data.length > 20; //Temperatue typo should be fixed eventually.
 
                 // Humidity
                 var seriesMoisture = chartMoisture.series[0],
-                    shiftMoisture = seriesMoisture.data.length > 20; //seriesTemperature.data.length > 20
+                    shiftMoisture = seriesTemperature.data.length > 20; //seriesMoisture.data.length > 20 ???
 
                 // Add the Point
                 // Time Temperature
@@ -114,8 +114,8 @@
                 $(".sensor2").text("");
                 $(".sensor2").text("Soil Moisture : " +  Math.round(data2[1]) );
 
-                // call it again after one second
-                setTimeout(requestData, 2000);
+                // call it again after every 15 seconds
+                setTimeout(requestData, 15000);
 
             });
         }
@@ -159,7 +159,7 @@
             // -------------- Chart 1 Ends -------------------
 
             // -------------- Chart 2 Begins -----------------
-            chartHumidity = new Highcharts.Chart({
+            chartMoisture = new Highcharts.Chart({
                 chart:
                     {
                         renderTo: 'data-moisture',
